@@ -4,10 +4,8 @@ sudo: false
 node_js:
   - "0.10"
   - "0.12"
-  - "1.0"
-  - "1.8"
-  - "2.0"
-  - "2.1"
+  - "1"
+  - "2"
 
 notifications:
   email:
