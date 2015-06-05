@@ -1,6 +1,6 @@
 {
   "name": "is-async-function",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Check that given function is async (callback) function or not. Trying to guess that based on check if `callback` or `cb` exists in function arguments.",
   "repository": "tunnckoCore/is-async-function",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
