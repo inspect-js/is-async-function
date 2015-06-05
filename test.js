@@ -15,6 +15,15 @@ var matcher = require('is-match')
 var isAsyncFunction = require('./index')
 
 test('is-async-function:', function () {
+  test('should throw TypeError if not function given', function (done) {
+    function fixture () {
+      isAsyncFunction(12345)
+    }
+
+    test.throws(fixture, TypeError)
+    test.throws(fixture, /is-async-function expect a function/)
+    done()
+  })
   test('should return true for all async `fs` methods', function () {
     var keys = Object.keys(fs)
     var isMatch = matcher('!*{Sync,sync,Stats,_*,watch,Stream}*')
