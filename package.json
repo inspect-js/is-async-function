@@ -17,5 +17,19 @@
     "is-match": "^0.2.0",
     "request": "^2.57.0"
   },
-  "keywords": []
+  "keywords": [
+    "async",
+    "asynchronous",
+    "callback",
+    "cb",
+    "check",
+    "fast",
+    "fn",
+    "function",
+    "guess",
+    "is",
+    "try",
+    "utils",
+    "validate"
+  ]
 }
