@@ -12,6 +12,7 @@ module.exports = function isAsyncFn (fn, max) {
     throw new TypeError('is-async-function expect a function')
   }
 
-  var fnStr = fn.toString().slice(8, Number(max) || 150)
-  return fnStr.indexOf('callback') !== -1 || fnStr.indexOf('cb') !== -1
+  var fnStr = fn.toString().slice(8, Number(max) || 100)
+  return fnStr.indexOf('callback') !== -1 || fnStr.indexOf('cb') !== -1 ||
+    fnStr.indexOf('done') !== -1 || fnStr.indexOf('next') !== -1
 }
