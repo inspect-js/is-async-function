@@ -1,5 +1,11 @@
 
 
+## 1.1.2 - 2016-03-18
+- Release v1.1.2 / npm@v1.1.2
+- update metadata, keyword
+- update docs, description
+- cleanup unused arguments
+
 ## 1.1.1 - 2016-03-18
 - Release v1.1.1 / npm@v1.1.1
 - add related libs
