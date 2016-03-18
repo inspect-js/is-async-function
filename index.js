@@ -29,21 +29,20 @@
  * ```
  *
  * @param  {Function} `fn` Is this `fn` a callback function.
- * @param  {Array}    `ignores` Arguments names, default are `['callback', 'callback_', 'done', 'next', 'cb']`.
- * @param  {Number}   `max` How many characters to cut from `fn`s toString, default `250`. Passed to [function-arguments][].
+ * @param  {Array}    `names` Arguments names, default are [common-callback-names][].
  * @return {Boolean}
  * @api public
  */
 
-module.exports = function isAsyncFunction (fn, ignores, max) {
+module.exports = function isAsyncFunction (fn, names) {
   if (typeof fn !== 'function') {
     throw new TypeError('is-async-function expect a function')
   }
 
   var defaults = ['callback', 'callback_', 'done', 'next', 'cb']
-  var args = require('function-arguments')(fn, max || 250)
+  var args = require('function-arguments')(fn)
 
-  ignores = require('isarray')(ignores) ? ignores : defaults
-  return require('arr-includes')(args, ignores)
+  names = require('isarray')(names) ? names : defaults
+  return require('arr-includes')(args, names)
 }
 

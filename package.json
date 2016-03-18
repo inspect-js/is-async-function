@@ -1,7 +1,7 @@
 {
   "name": "is-async-function",
   "version": "1.1.1",
-  "description": "Is function really asynchronous (callback) function? Trying to guess that based on check if `callback`, `cb`, `done`, `next` exists as function arguments names or you can pass your custom.",
+  "description": "Is function really asynchronous function? Trying to guess that based on check if [common-callback-names][] exists as function arguments names or you can pass your custom.",
   "repository": "tunnckoCore/is-async-function",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
   "precommit.silent": true,
@@ -27,7 +27,24 @@
     "index.js"
   ],
   "keywords": [
-    "is-async-function"
+    "assume",
+    "async",
+    "callback",
+    "cb",
+    "check",
+    "common",
+    "done",
+    "exist",
+    "fn",
+    "func",
+    "function",
+    "is",
+    "is-async-function",
+    "names",
+    "next",
+    "really",
+    "util",
+    "validate"
   ],
   "verb": {
     "run": true,
@@ -41,11 +58,15 @@
         "function-arguments",
         "fn-args",
         "get-fn-name",
-        "fn-name"
+        "fn-name",
+        "parse-function",
+        "is-callback-function",
+        "common-callback-names"
       ]
     },
     "reflinks": [
-      "function-arguments"
+      "function-arguments",
+      "common-callback-names"
     ],
     "lint": {
       "reflinks": true
