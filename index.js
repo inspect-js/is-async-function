@@ -7,12 +7,25 @@
 
 'use strict'
 
-module.exports = function isAsyncFn (fn, max) {
+/**
+ * > Trying to guess is function asynchronous (callback) function or not.
+ *
+ * @param  {Function} `fn`
+ * @param  {Array}    `ignores`
+ * @param  {Number}   `max`
+ * @return {Boolean}
+ * @api public
+ */
+
+module.exports = function isAsyncFn (fn, ignores, max) {
   if (typeof fn !== 'function') {
     throw new TypeError('is-async-function expect a function')
   }
 
-  var fnStr = fn.toString().slice(8, Number(max) || 100)
-  return fnStr.indexOf('callback') !== -1 || fnStr.indexOf('cb') !== -1 ||
-    fnStr.indexOf('done') !== -1 || fnStr.indexOf('next') !== -1
+  var defaults = ['callback', 'callback_', 'done', 'next', 'cb']
+  var args = require('function-arguments')(fn, max || 250)
+
+  ignores = require('isarray')(ignores) ? ignores : defaults
+  return require('arr-includes')(args, ignores)
 }
+

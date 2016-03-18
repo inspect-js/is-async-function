@@ -10,7 +10,11 @@
   "scripts": {
     "test": "standard && node test.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "arr-includes": "^1.0.0",
+    "function-arguments": "^1.0.1",
+    "isarray": "^1.0.0"
+  },
   "devDependencies": {
     "assertit": "^0.1.0",
     "gh-got": "^1.1.0",
