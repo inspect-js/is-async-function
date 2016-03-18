@@ -17,9 +17,9 @@
   },
   "devDependencies": {
     "assertit": "^0.1.0",
-    "gh-got": "^1.1.0",
-    "got": "^3.2.0",
-    "is-match": "^0.2.0",
+    "gh-got": "^2.4.0",
+    "got": "^6.2.0",
+    "is-match": "^0.4.0",
     "pre-commit": "^1.1.2",
     "request": "^2.57.0"
   },
