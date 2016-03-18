@@ -30,10 +30,25 @@
     "is-async-function"
   ],
   "verb": {
+    "run": true,
     "toc": false,
     "layout": "empty",
     "tasks": [
       "readme"
-    ]
+    ],
+    "related": {
+      "list": [
+        "function-arguments",
+        "fn-args",
+        "get-fn-name",
+        "fn-name"
+      ]
+    },
+    "reflinks": [
+      "function-arguments"
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }
