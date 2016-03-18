@@ -8,7 +8,8 @@
 'use strict'
 
 /**
- * > Trying to guess is function asynchronous (callback) function or not.
+ * > Trying to guess is `fn` asynchronous function or not.
+ * But not [is-callback-function][] be aware of that diff.
  *
  * **Example**
  *

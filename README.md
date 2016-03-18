@@ -16,8 +16,8 @@ npm i is-async-function --save
 const isAsyncFunction = require('is-async-function')
 ```
 
-### [isAsyncFunction](index.js#L37)
-> Trying to guess is function asynchronous (callback) function or not.
+### [isAsyncFunction](index.js#L38)
+> Trying to guess is `fn` asynchronous function or not. But not [is-callback-function][] be aware of that diff.
 
 **Params**
 
@@ -62,6 +62,7 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 
 [function-arguments]: https://github.com/tunnckocore/function-arguments
 [common-callback-names]: https://github.com/tunnckocore/common-callback-names
+[is-callback-function]: https://github.com/tunnckocore/is-callback-function
 
 [npmjs-url]: https://www.npmjs.com/package/is-async-function
 [npmjs-img]: https://img.shields.io/npm/v/is-async-function.svg?label=is-async-function

@@ -66,7 +66,8 @@
     },
     "reflinks": [
       "function-arguments",
-      "common-callback-names"
+      "common-callback-names",
+      "is-callback-function"
     ],
     "lint": {
       "reflinks": true
