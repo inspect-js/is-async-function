@@ -10,14 +10,32 @@
 /**
  * > Trying to guess is function asynchronous (callback) function or not.
  *
- * @param  {Function} `fn`
- * @param  {Array}    `ignores`
- * @param  {Number}   `max`
+ * **Example**
+ *
+ * ```js
+ * var fs = require('fs')
+ * var isAsyncFn = require('is-async-function')
+ *
+ * console.log(isAsyncFunction(fs.readFile)) // => true
+ * console.log(isAsyncFunction(fs.stat)) // => true
+ *
+ * console.log(isAsyncFunction(fs.readFileSync)) // => false
+ * console.log(isAsyncFunction(fs.statSync)) // => false
+ *
+ * // or pass custom names to recognize as `async`
+ * console.log(isAsyncFunction(fs.stat, ['cb'])) // => false
+ * console.log(isAsyncFunction(fs.readFile, ['callback', 'next']))
+ * // => false, because fs.readFile uses `callback_`
+ * ```
+ *
+ * @param  {Function} `fn` Is this `fn` a callback function.
+ * @param  {Array}    `ignores` Arguments names, default are `['callback', 'callback_', 'done', 'next', 'cb']`.
+ * @param  {Number}   `max` How many characters to cut from `fn`s toString, default `250`. Passed to [function-arguments][].
  * @return {Boolean}
  * @api public
  */
 
-module.exports = function isAsyncFn (fn, ignores, max) {
+module.exports = function isAsyncFunction (fn, ignores, max) {
   if (typeof fn !== 'function') {
     throw new TypeError('is-async-function expect a function')
   }

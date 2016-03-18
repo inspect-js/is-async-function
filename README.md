@@ -16,16 +16,33 @@ npm i is-async-function --save
 const isAsyncFunction = require('is-async-function')
 ```
 
-### [isAsyncFn](index.js#L20)
-
+### [isAsyncFunction](index.js#L38)
 > Trying to guess is function asynchronous (callback) function or not.
 
 **Params**
 
-* `fn` **{Function}**    
-* `ignores` **{Array}**    
-* `max` **{Number}**    
+* `fn` **{Function}**: Is this `fn` a callback function.    
+* `ignores` **{Array}**: Arguments names, default are `['callback', 'callback_', 'done', 'next', 'cb']`.    
+* `max` **{Number}**: How many characters to cut from `fn`s toString, default `250`. Passed to [function-arguments][].    
 * `returns` **{Boolean}**  
+
+**Example**
+
+```js
+var fs = require('fs')
+var isAsyncFn = require('is-async-function')
+
+console.log(isAsyncFunction(fs.readFile)) // => true
+console.log(isAsyncFunction(fs.stat)) // => true
+
+console.log(isAsyncFunction(fs.readFileSync)) // => false
+console.log(isAsyncFunction(fs.statSync)) // => false
+
+// or pass custom names to recognize as `async`
+console.log(isAsyncFunction(fs.stat, ['cb'])) // => false
+console.log(isAsyncFunction(fs.readFile, ['callback', 'next']))
+// => false, because fs.readFile uses `callback_`
+```
 
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/is-async-function/issues/new).  
