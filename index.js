@@ -39,11 +39,6 @@ module.exports = function isAsyncFunction (fn, names) {
   if (typeof fn !== 'function') {
     throw new TypeError('is-async-function expect a function')
   }
-
-  var defaults = ['callback', 'callback_', 'done', 'next', 'cb']
-  var args = require('function-arguments')(fn)
-
-  names = require('isarray')(names) ? names : defaults
-  return require('arr-includes')(args, names)
+  names = require('isarray')(names) ? names : require('common-callback-names')
+  return require('arr-includes')(require('function-arguments')(fn), names)
 }
-

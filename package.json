@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "arr-includes": "^1.0.0",
+    "common-callback-names": "^1.0.2",
     "function-arguments": "^1.0.1",
     "isarray": "^1.0.0"
   },
