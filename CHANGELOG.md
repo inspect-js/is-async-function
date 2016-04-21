@@ -1,5 +1,10 @@
 
 
+## 1.1.3 - 2016-04-21
+- Release v1.1.3 / npm@v1.1.3
+- use `common-callback-names` package
+- bump deps
+
 ## 1.1.2 - 2016-03-18
 - Release v1.1.2 / npm@v1.1.2
 - update metadata, keyword
