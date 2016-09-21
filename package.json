@@ -18,10 +18,10 @@
     "lazy-cache": "^2.0.1"
   },
   "devDependencies": {
-    "assertit": "^0.1.0",
     "gh-got": "^1.1.0",
     "got": "^3.2.0",
     "is-match": "^0.4.1",
+    "mukla": "^0.4.4",
     "pre-commit": "^1.1.2",
     "request": "^2.57.0"
   },
