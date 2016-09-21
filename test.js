@@ -14,6 +14,15 @@ var test = require('mukla')
 var matcher = require('is-match')
 var isAsyncFunction = require('./index')
 
+/**
+ * deps to test against
+ */
+
+var got = require('got')
+var ghGot = require('gh-got')
+var request = require('request')
+var isMatch = require('is-match')
+
 test('should throw TypeError if not function given', function (done) {
   function fixture () {
     isAsyncFunction(12345)
@@ -39,19 +48,9 @@ test('should return true for all async `fs` methods', function (done) {
   done()
 })
 
-test('should return false for JSON.parse', function (done) {
-  var actual = isAsyncFunction(JSON.parse)
-  var expected = false
-
-  test.equal(actual, expected)
-  done()
-})
-
-test('should return false for JSON.stringify', function (done) {
-  var actual = isAsyncFunction(JSON.stringify)
-  var expected = false
-
-  test.equal(actual, expected)
+test('should return false for JSON.parse and JSON.stringify', function (done) {
+  test.equal(isAsyncFunction(JSON.parse), false)
+  test.equal(isAsyncFunction(JSON.stringify), false)
   done()
 })
 
@@ -70,37 +69,16 @@ test('should return false for fs.readFileSync, fs.statSync, etc', function (done
   done()
 })
 
-test('should return true for `request` package', function (done) {
-  var request = require('request')
-  var actual = isAsyncFunction(request)
-  var expected = true
-
-  test.equal(actual, expected)
+test('should return true for `request`, `got` and `gh-got` packages', function (done) {
+  test.equal(isAsyncFunction(got), true)
+  test.equal(isAsyncFunction(ghGot), true)
+  test.equal(isAsyncFunction(request), true)
   done()
 })
 
 test('should return false for `is-match` (micromatch) package', function (done) {
-  var isMatch = require('is-match')
   var actual = isAsyncFunction(isMatch)
   var expected = false
-
-  test.equal(actual, expected)
-  done()
-})
-
-test('should return true for `got` package', function (done) {
-  var got = require('got')
-  var actual = isAsyncFunction(got)
-  var expected = true
-
-  test.equal(actual, expected)
-  done()
-})
-
-test('should return true for `gh-got` package', function (done) {
-  var ghgot = require('gh-got')
-  var actual = isAsyncFunction(ghgot)
-  var expected = true
 
   test.equal(actual, expected)
   done()
