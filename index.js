@@ -7,6 +7,8 @@
 
 'use strict'
 
+var utils = require('./utils')
+
 /**
  * > Trying to guess is `fn` asynchronous function or not.
  * But not [is-callback-function][] be aware of that diff.
@@ -39,6 +41,8 @@ module.exports = function isAsyncFunction (fn, names) {
   if (typeof fn !== 'function') {
     throw new TypeError('is-async-function expect a function')
   }
-  names = require('isarray')(names) ? names : require('common-callback-names')
-  return require('arr-includes')(require('function-arguments')(fn), names)
+
+  names = utils.isArray(names) ? names : utils.arrayify(names)
+  names = names.length ? names : utils.callbackNames
+  return utils.arrIncludes(utils.fnArgs(fn), names)
 }

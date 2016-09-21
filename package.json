@@ -11,10 +11,11 @@
     "test": "standard && node test.js"
   },
   "dependencies": {
-    "arr-includes": "^1.0.0",
+    "arr-includes": "^1.0.1",
     "common-callback-names": "^1.0.2",
-    "function-arguments": "^1.0.1",
-    "isarray": "^1.0.0"
+    "function-arguments": "^1.0.5",
+    "lazy-arrayify": "^1.0.3",
+    "lazy-cache": "^2.0.1"
   },
   "devDependencies": {
     "assertit": "^0.1.0",
@@ -25,7 +26,8 @@
     "request": "^2.57.0"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "utils.js"
   ],
   "keywords": [
     "assume",
