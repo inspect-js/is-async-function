@@ -1,5 +1,9 @@
 
 
+## 1.1.5 - 2016-09-21
+- Release v1.1.5 / npm@v1.1.5
+- update tests to cleanup codeclimate issues
+
 ## 1.1.4 - 2016-09-21
 - Release v1.1.4 / npm@v1.1.4
 - use `lazy-cache` and `lazy-arrayify`, closes #10
