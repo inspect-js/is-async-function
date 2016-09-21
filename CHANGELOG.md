@@ -1,5 +1,16 @@
 
 
+## 1.1.4 - 2016-09-21
+- Release v1.1.4 / npm@v1.1.4
+- use `lazy-cache` and `lazy-arrayify`, closes #10
+- add support for `names` to be a string, not only array of strings
+- update to use `mukla` instead of `assertit`
+- update npm scripts
+- update travis builds and coverage things
+- update gitignore
+- update editorconfig
+- add `standard`, `nyc` and `coveralls` to devDeps
+
 ## 1.1.3 - 2016-04-21
 - Release v1.1.3 / npm@v1.1.3
 - use `common-callback-names` package
