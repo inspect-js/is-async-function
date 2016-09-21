@@ -16,7 +16,7 @@ npm i is-async-function --save
 const isAsyncFunction = require('is-async-function')
 ```
 
-### [isAsyncFunction](index.js#L38)
+### [isAsyncFunction](index.js#L40)
 > Trying to guess is `fn` asynchronous function or not. But not [is-callback-function][] be aware of that diff.
 
 **Params**
@@ -44,13 +44,13 @@ console.log(isAsyncFunction(fs.readFile, ['callback', 'next']))
 ```
 
 ## Related
-* [common-callback-names](https://www.npmjs.com/package/common-callback-names): List of common callback names - callback, cb, callback_, next, done. | [homepage](https://github.com/tunnckocore/common-callback-names)
-* [fn-args](https://www.npmjs.com/package/fn-args): Get the arguments of a function | [homepage](https://github.com/sindresorhus/fn-args)
-* [fn-name](https://www.npmjs.com/package/fn-name): Get the name of a named function | [homepage](https://github.com/sindresorhus/fn-name)
-* [function-arguments](https://www.npmjs.com/package/function-arguments): Get arguments of a function, useful for and used in dependency injectors.… [more](https://www.npmjs.com/package/function-arguments) | [homepage](https://github.com/tunnckocore/function-arguments)
-* [get-fn-name](https://www.npmjs.com/package/get-fn-name): Get function name with strictness and correctness in mind. Also works for… [more](https://www.npmjs.com/package/get-fn-name) | [homepage](https://github.com/tunnckocore/get-fn-name)
-* [is-callback-function](https://www.npmjs.com/package/is-callback-function): Returns true if function is a callback. Checks its name is one… [more](https://www.npmjs.com/package/is-callback-function) | [homepage](https://github.com/tunnckocore/is-callback-function)
-* [parse-function](https://www.npmjs.com/package/parse-function): Parse a function, arrow function or string to object with name, args,… [more](https://www.npmjs.com/package/parse-function) | [homepage](https://github.com/tunnckocore/parse-function)
+- [common-callback-names](https://www.npmjs.com/package/common-callback-names): List of common callback names - callback, cb, callback_, next, done. | [homepage](https://github.com/tunnckocore/common-callback-names#readme "List of common callback names - callback, cb, callback_, next, done.")
+- [fn-args](https://www.npmjs.com/package/fn-args): Get the arguments of a function | [homepage](https://github.com/sindresorhus/fn-args "Get the arguments of a function")
+- [fn-name](https://www.npmjs.com/package/fn-name): Get the name of a named function | [homepage](https://github.com/sindresorhus/fn-name "Get the name of a named function")
+- [function-arguments](https://www.npmjs.com/package/function-arguments): Get arguments of a function, useful for and used in dependency injectors… [more](https://github.com/tunnckocore/function-arguments#readme) | [homepage](https://github.com/tunnckocore/function-arguments#readme "Get arguments of a function, useful for and used in dependency injectors. Works for regular functions, generator functions and arrow functions.")
+- [get-fn-name](https://www.npmjs.com/package/get-fn-name): Get function name with strictness and correctness in mind. Also works for… [more](https://github.com/tunnckocore/get-fn-name#readme) | [homepage](https://github.com/tunnckocore/get-fn-name#readme "Get function name with strictness and correctness in mind. Also works for arrow functions and getting correct name of bounded functions. Powered by [fn-name][].")
+- [is-callback-function](https://www.npmjs.com/package/is-callback-function): Returns true if function is a callback. Checks its name is one… [more](https://github.com/tunnckocore/is-callback-function#readme) | [homepage](https://github.com/tunnckocore/is-callback-function#readme "Returns true if function is a callback. Checks its name is one of [common-callback-names][] - callback, cb, cb_, callback_, next, done, they can be customized, these are default.")
+- [parse-function](https://www.npmjs.com/package/parse-function): Parse a function, arrow function or string to object with name, args… [more](https://github.com/tunnckocore/parse-function#readme) | [homepage](https://github.com/tunnckocore/parse-function#readme "Parse a function, arrow function or string to object with name, args, params and body properties.")
 
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/is-async-function/issues/new).  
@@ -60,8 +60,8 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 
 [![tunnckoCore.tk][author-www-img]][author-www-url] [![keybase tunnckoCore][keybase-img]][keybase-url] [![tunnckoCore npm][author-npm-img]][author-npm-url] [![tunnckoCore twitter][author-twitter-img]][author-twitter-url] [![tunnckoCore github][author-github-img]][author-github-url]
 
-[function-arguments]: https://github.com/tunnckocore/function-arguments
 [common-callback-names]: https://github.com/tunnckocore/common-callback-names
+[function-arguments]: https://github.com/tunnckocore/function-arguments
 [is-callback-function]: https://github.com/tunnckocore/is-callback-function
 
 [npmjs-url]: https://www.npmjs.com/package/is-async-function
@@ -106,3 +106,4 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 [new-message-url]: https://github.com/tunnckoCore/ama
 [new-message-img]: https://img.shields.io/badge/ask%20me-anything-green.svg
 
+[fn-name]: https://github.com/sindresorhus/fn-name
