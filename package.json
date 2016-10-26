@@ -17,7 +17,7 @@
     "report-coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
-    "arr-includes": "^2.0.0",
+    "arr-includes": "^1.0.1",
     "common-callback-names": "^1.0.2",
     "function-arguments": "^1.0.5",
     "lazy-arrayify": "^1.0.3",
