@@ -27,8 +27,8 @@ var utils = require('./utils')
  *
  * // or pass custom names to recognize as `async`
  * console.log(isAsyncFunction(fs.stat, ['cb'])) // => false
- * console.log(isAsyncFunction(fs.readFile, ['callback', 'next']))
- * // => false, because fs.readFile uses `callback_`
+ * console.log(isAsyncFunction(fs.readFile, ['foo', 'bar']))
+ * // => false, because fs.readFile uses `cb`
  * ```
  *
  * @param  {Function} `fn` is this `fn` a callback function
@@ -37,7 +37,10 @@ var utils = require('./utils')
  *                            pass `false` to get index (position) - this is
  *                            useful when you wanna understand which "callback name"
  *                            exists as argument in that `fn`
- * @return {Boolean}
+ * @return {Boolean|Number} always boolean `true` or `false` when on strict mode,
+ *                          othewise it can be Number index representing the position
+ *                          and if index is 0 it is transformed to boolean `true` - so
+ *                          always positive value if function is async.
  * @api public
  */
 
