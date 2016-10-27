@@ -1,3 +1,17 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/tunnckocore/is-async-function/compare/v1.1.5...v1.2.0) (2016-10-27)
+
+
+### Features
+
+* **strict:** introduce strict mode ([ef8526f](https://github.com/tunnckocore/is-async-function/commit/ef8526f))
+
+
+
 
 
 ## 1.1.5 - 2016-09-21
