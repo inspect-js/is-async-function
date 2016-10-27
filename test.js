@@ -14,15 +14,6 @@ var test = require('mukla')
 var matcher = require('is-match')
 var isAsyncFunction = require('./index')
 
-/**
- * deps to test against
- */
-
-var got = require('got')
-var ghGot = require('gh-got')
-var request = require('request')
-var isMatch = require('is-match')
-
 test('should throw TypeError if not function given', function (done) {
   function fixture () {
     isAsyncFunction(12345)
@@ -69,17 +60,21 @@ test('should return false for fs.readFileSync, fs.statSync, etc', function (done
   done()
 })
 
-test('should return true for `request`, `got` and `gh-got` packages', function (done) {
-  test.equal(isAsyncFunction(got), true)
-  test.equal(isAsyncFunction(ghGot), true)
-  test.equal(isAsyncFunction(request), true)
+test('should accept second argument `names` to be boolean true', function (done) {
+  test.strictEqual(isAsyncFunction(fs.readFile, true), true)
   done()
 })
 
-test('should return false for `is-match` (micromatch) package', function (done) {
-  var actual = isAsyncFunction(isMatch)
-  var expected = false
+test('should have non-strict mode to return index', function (done) {
+  var res = isAsyncFunction(fs.stat, null, false)
+  test.strictEqual(typeof res, 'number')
+  test.strictEqual(res, 1)
+  done()
+})
 
-  test.equal(actual, expected)
+test('should allow passing custom names', function (done) {
+  var result = isAsyncFunction(fs.readFile, ['foo', 'bar'])
+
+  test.strictEqual(result, false)
   done()
 })

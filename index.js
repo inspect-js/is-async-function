@@ -31,18 +31,28 @@ var utils = require('./utils')
  * // => false, because fs.readFile uses `callback_`
  * ```
  *
- * @param  {Function} `fn` Is this `fn` a callback function.
- * @param  {Array}    `names` Arguments names, default are [common-callback-names][].
+ * @param  {Function} `fn` is this `fn` a callback function
+ * @param  {Array} `names` arguments names, default are [common-callback-names][]
+ * @param  {Boolean} `strict` defaults to `true` to always return a boolean,
+ *                            pass `false` to get index (position) - this is
+ *                            useful when you wanna understand which "callback name"
+ *                            exists as argument in that `fn`
  * @return {Boolean}
  * @api public
  */
 
-module.exports = function isAsyncFunction (fn, names) {
+module.exports = function isAsyncFunction (fn, names, strict) {
   if (typeof fn !== 'function') {
     throw new TypeError('is-async-function expect a function')
   }
 
+  strict = typeof names === 'boolean' ? names : strict
+  strict = typeof strict === 'boolean' ? strict : true
+  names = typeof names === 'boolean' ? null : names
+
   names = utils.isArray(names) ? names : utils.arrayify(names)
   names = names.length ? names : utils.callbackNames
-  return utils.arrIncludes(utils.fnArgs(fn), names)
+
+  var idx = utils.arrIncludes(utils.fnArgs(fn), names)
+  return strict ? Boolean(idx) : idx
 }

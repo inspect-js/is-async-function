@@ -13,26 +13,30 @@
     "test": "npm run coverage",
     "posttest": "npm run lint:coverage",
     "coverage": "nyc node test.js",
-    "lint:coverage": "nyc check-coverage --statements 100 --functions 100 --lines 100",
-    "report-coverage": "nyc report --reporter=text-lcov | coveralls"
+    "lint:coverage": "nyc check-coverage --lines 100 --branches 100 --statements 100 --functions 100",
+    "report-coverage": "nyc report --reporter=text-lcov | coveralls",
+    "prerelease": "npm test",
+    "release": "standard-version --sign --no-verify",
+    "precommit": "git add --all",
+    "commit": "git-cz"
   },
   "dependencies": {
-    "arr-includes": "^1.0.1",
+    "arr-includes": "^2.0.0",
     "common-callback-names": "^1.0.2",
-    "function-arguments": "^1.0.5",
+    "function-arguments": "^1.0.6",
     "lazy-arrayify": "^1.0.3",
     "lazy-cache": "^2.0.1"
   },
   "devDependencies": {
-    "coveralls": "^2.11.14",
-    "gh-got": "^1.1.0",
-    "got": "^3.2.0",
+    "commitizen": "^2.8.6",
+    "coveralls": "^2.11.12",
+    "cz-conventional-changelog": "^1.2.0",
     "is-match": "^0.4.1",
-    "mukla": "^0.4.4",
-    "nyc": "^8.3.0",
+    "mukla": "^0.4.1",
+    "nyc": "^8.1.0",
     "pre-commit": "^1.1.3",
-    "request": "^2.57.0",
-    "standard": "^8.1.0"
+    "standard": "^8.4.0",
+    "standard-version": "^2.4.0"
   },
   "files": [
     "index.js",
@@ -58,6 +62,11 @@
     "util",
     "validate"
   ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "verb": {
     "run": true,
     "toc": false,
