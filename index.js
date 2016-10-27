@@ -56,6 +56,6 @@ module.exports = function isAsyncFunction (fn, names, strict) {
   names = utils.isArray(names) ? names : utils.arrayify(names)
   names = names.length ? names : utils.callbackNames
 
-  var idx = utils.arrIncludes(utils.fnArgs(fn), names)
+  var idx = utils.arrIncludes(names, utils.fnArgs(fn))
   return strict ? Boolean(idx) : idx
 }

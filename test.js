@@ -67,8 +67,16 @@ test('should accept second argument `names` to be boolean true', function (done)
 
 test('should have non-strict mode to return index', function (done) {
   var res = isAsyncFunction(fs.stat, null, false)
-  test.strictEqual(typeof res, 'number')
-  test.strictEqual(res, 1)
+
+  // fs.stat uses `callback` as callbacka rgument
+  test.strictEqual(typeof res, 'boolean')
+  test.strictEqual(res, true)
+
+  // `next` is 6th item in `common-callback-names`
+  function fn (foo, bar, next) {}
+  function fn2 (foo, cb_) {}
+  test.strictEqual(isAsyncFunction(fn, null, false), 5)
+  test.strictEqual(isAsyncFunction(fn2, false), 3)
   done()
 })
 
