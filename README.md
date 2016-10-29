@@ -23,6 +23,13 @@ const isAsyncFunction = require('is-async-function')
 ### [isAsyncFunction](index.js#L47)
 > Trying to guess is `fn` asynchronous function or not. But not [is-callback-function][] be aware of that diff.
 
+**Params**
+
+* `fn` **{Function}**: is this `fn` a callback function    
+* `names` **{Array}**: arguments names, default are [common-callback-names][]    
+* `strict` **{Boolean}**: defaults to `true` to always return a boolean, pass `false` to get index (position) - this is useful when you wanna understand which "callback name" exists as argument in that `fn`    
+* `returns` **{Boolean|Number}**: always boolean `true` or `false` when on strict mode, othewise it can be Number index representing the position and if index is 0 it is transformed to boolean `true` - so always positive value if function is async.  
+
 **Example**
 
 ```js
@@ -41,13 +48,6 @@ console.log(isAsyncFunction(fs.readFile, ['foo', 'bar']))
 // => false, because fs.readFile uses `cb`
 ```
 
-**Params**
-
-* `fn` **{Function}**: is this `fn` a callback function    
-* `names` **{Array}**: arguments names, default are [common-callback-names][]    
-* `strict` **{Boolean}**: defaults to `true` to always return a boolean, pass `false` to get index (position) - this is useful when you wanna understand which "callback name" exists as argument in that `fn`    
-* `returns` **{Boolean|Number}**: always boolean `true` or `false` when on strict mode, othewise it can be Number index representing the position and if index is 0 it is transformed to boolean `true` - so always positive value if function is async.  
-
 **non-strict mode**
 
 > passing `false` as second or third argument
@@ -63,6 +63,29 @@ console.log(isAsyncFunction(fs.stat, false)) // => 1
 // => 1, because it callback argument is called `callback_`
 // and that's the second element in `common-callback-names` array
 ```
+
+**Side note:** In previous nodejs versions it was called in a few different ways - `cb_`, `callback_` and etc. That's why [common-callback-names][] exists. As in v7 it seems everything now is called `callback`. So in most of the cases you will get boolean `true` always - both in strict and non-strict mode. In non-strict mode that will mean your function has argument called `callback`.
+
+If you pass array of names as second argument, in non-strict mode you will get index of that array.
+
+**Example**
+
+```js
+var isAsyncFn = require('is-async-function')
+
+// you considered you callback fucntion
+// to be called `qux` for some reason
+function myAsyncFn (foo, bar, qux) {
+  qux(null, 123)
+}
+
+console.log(isAsyncFn(myAsyncFn)) // => false
+console.log(isAsyncFn(myAsyncFn, false)) // => false
+
+console.log(isAsyncFn(myAsyncFn, ['callback', 'qux'], false)) // => 1
+// you are getting "1", because `qux` is second item
+// in provided `names` array.
+``` 
 
 ## Related
 - [common-callback-names](https://www.npmjs.com/package/common-callback-names): List of common callback names - callback, cb, callback_, next, done. | [homepage](https://github.com/tunnckocore/common-callback-names#readme "List of common callback names - callback, cb, callback_, next, done.")
