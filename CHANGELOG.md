@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.2"></a>
+## [1.2.2](https://github.com/tunnckocore/is-async-function/compare/v1.2.1...v1.2.2) (2016-10-29)
+
+
+### Bug Fixes
+
+* **docs:** fixes and updates API docs ([b909ae7](https://github.com/tunnckocore/is-async-function/commit/b909ae7)), closes [#14](https://github.com/tunnckocore/is-async-function/issues/14)
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/tunnckocore/is-async-function/compare/v1.2.0...v1.2.1) (2016-10-27)
 
