@@ -664,6 +664,10 @@ dedent@0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/dedent/-/dedent-0.6.0.tgz#0e6da8f0ce52838ef5cec5c8f9396b0c1b64a3cb"
 
+deep-equal@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.0.1.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"
+
 deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
@@ -1651,6 +1655,15 @@ is-glob@^2.0.0, is-glob@^2.0.1:
   resolved "https://registry.yarnpkg.com/is-glob/-/is-glob-2.0.1.tgz#d096f926a3ded5600f3fdfd91198cb0888c2d863"
   dependencies:
     is-extglob "^1.0.0"
+
+is-match@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/is-match/-/is-match-0.4.1.tgz#fb5f6c6709a1543b7c7efa7d9530e5b776f61f83"
+  dependencies:
+    deep-equal "^1.0.1"
+    is-extendable "^0.1.1"
+    is-glob "^2.0.1"
+    micromatch "^2.3.7"
 
 is-my-json-valid@^2.10.0:
   version "2.16.0"
