@@ -8,7 +8,6 @@ components
 vendor
 build
 dest
-src
 lib-cov
 coverage
 nbproject
@@ -21,7 +20,6 @@ is-async-function
 # ##########
 *.7z
 *.dmg
-*.gz
 *.iso
 *.jar
 *.rar

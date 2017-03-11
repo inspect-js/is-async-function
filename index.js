@@ -1,13 +1,16 @@
 /*!
  * is-async-function <https://github.com/tunnckoCore/is-async-function>
  *
- * Copyright (c) 2015-2016 Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
+ * Copyright (c) Charlike Mike Reagent <@tunnckoCore> (https://i.am.charlike.online)
  * Released under the MIT license.
  */
 
 'use strict'
 
-var utils = require('./utils')
+var arrayify = require('arrify')
+var arrIncludes = require('arr-includes')
+var callbackNames = require('common-callback-names')
+var functionArguments = require('function-arguments')
 
 /**
  * > Trying to guess is `fn` asynchronous function or not.
@@ -53,9 +56,9 @@ module.exports = function isAsyncFunction (fn, names, strict) {
   strict = typeof strict === 'boolean' ? strict : true
   names = typeof names === 'boolean' ? null : names
 
-  names = utils.isArray(names) ? names : utils.arrayify(names)
-  names = names.length ? names : utils.callbackNames
+  names = Array.isArray(names) ? names : arrayify(names)
+  names = names.length ? names : callbackNames
 
-  var idx = utils.arrIncludes(names, utils.fnArgs(fn))
+  var idx = arrIncludes(names, functionArguments(fn))
   return strict ? Boolean(idx) : idx
 }

@@ -1,7 +1,7 @@
 /*!
  * is-async-function <https://github.com/tunnckoCore/is-async-function>
  *
- * Copyright (c) 2015-2016 Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
+ * Copyright (c) Charlike Mike Reagent <@tunnckoCore> (https://i.am.charlike.online)
  * Released under the MIT license.
  */
 
