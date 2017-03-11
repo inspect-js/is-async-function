@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.3"></a>
+## [1.2.3](https://github.com/tunnckocore/is-async-function/compare/v1.2.2...v1.2.3) (2017-03-11)
+
+
+### Bug Fixes
+
+* **docs:** regenerate readme ([592f1b7](https://github.com/tunnckocore/is-async-function/commit/592f1b7))
+* **package:** add missing dependency ([73f404d](https://github.com/tunnckocore/is-async-function/commit/73f404d))
+* **package:** wrong version, because too fast update ;d ([2e887f0](https://github.com/tunnckocore/is-async-function/commit/2e887f0))
+* **style:** remove lazy-cache, and update boilerplate stuff ([abd32db](https://github.com/tunnckocore/is-async-function/commit/abd32db))
+
+
+
 <a name="1.2.2"></a>
 ## [1.2.2](https://github.com/tunnckocore/is-async-function/compare/v1.2.1...v1.2.2) (2016-10-29)
 

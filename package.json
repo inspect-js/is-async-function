@@ -1,6 +1,6 @@
 {
   "name": "is-async-function",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Is function really asynchronous function? Trying to guess that based on check if [common-callback-names][] exists as function arguments names or you can pass your custom.",
   "repository": "tunnckoCore/is-async-function",
   "author": "Charlike Mike Reagent <@tunnckoCore> (https://i.am.charlike.online)",
