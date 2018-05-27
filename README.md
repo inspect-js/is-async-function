@@ -2,13 +2,11 @@
 
 > Is function really asynchronous function? Trying to guess that based on check if [common-callback-names][] exists as function arguments names or you can pass your custom.
 
-[![code climate][codeclimate-img]][codeclimate-url] 
 [![code style][standard-img]][standard-url] 
 [![linux build][travis-img]][travis-url] 
 [![windows build][appveyor-img]][appveyor-url] 
 [![code coverage][coverage-img]][coverage-url] 
 [![dependency status][david-img]][david-url]
-[![paypal donate][paypalme-img]][paypalme-url] 
 
 You might also be interested in [always-done](https://github.com/hybridables/always-done#readme).
 
@@ -165,7 +163,7 @@ $ npm install && npm test
 + [codementor/tunnckoCore](https://codementor.io/tunnckoCore)
 
 ## License
-Copyright © 2015, 2017, [Charlike Mike Reagent](https://i.am.charlike.online). Released under the [MIT License](LICENSE).
+Copyright © 2015-2018, [Charlike Mike Reagent](https://i.am.charlike.online). Released under the [MIT License](LICENSE).
 
 ***
 
@@ -195,14 +193,14 @@ _Project scaffolded using [charlike][] cli._
 [codeclimate-url]: https://codeclimate.com/github/tunnckoCore/is-async-function
 [codeclimate-img]: https://img.shields.io/codeclimate/github/tunnckoCore/is-async-function.svg
 
-[travis-url]: https://travis-ci.org/tunnckoCore/is-async-function
-[travis-img]: https://img.shields.io/travis/tunnckoCore/is-async-function/master.svg?label=linux
+[travis-url]: https://travis-ci.org/olstenlarck/is-async-function
+[travis-img]: https://img.shields.io/travis/olstenlarck/is-async-function/master.svg?label=linux
 
 [appveyor-url]: https://ci.appveyor.com/project/tunnckoCore/is-async-function
 [appveyor-img]: https://img.shields.io/appveyor/ci/tunnckoCore/is-async-function/master.svg?label=windows
 
-[coverage-url]: https://codecov.io/gh/tunnckoCore/is-async-function
-[coverage-img]: https://img.shields.io/codecov/c/github/tunnckoCore/is-async-function/master.svg
+[coverage-url]: https://codecov.io/gh/olstenlarck/is-async-function
+[coverage-img]: https://img.shields.io/codecov/c/github/olstenlarck/is-async-function/master.svg
 
 [david-url]: https://david-dm.org/tunnckoCore/is-async-function
 [david-img]: https://img.shields.io/david/tunnckoCore/is-async-function.svg
