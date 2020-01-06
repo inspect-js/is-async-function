@@ -8,6 +8,8 @@
 [![code coverage][coverage-img]][coverage-url] 
 [![dependency status][david-img]][david-url]
 
+[![Become a Patron][patreon-img]][patreon-url] [![ko-fi.com buy me a coffee][kofi-img]][kofi-url]
+
 You might also be interested in [always-done](https://github.com/hybridables/always-done#readme).
 
 ## Table of Contents
@@ -193,14 +195,14 @@ _Project scaffolded using [charlike][] cli._
 [codeclimate-url]: https://codeclimate.com/github/tunnckoCore/is-async-function
 [codeclimate-img]: https://img.shields.io/codeclimate/github/tunnckoCore/is-async-function.svg
 
-[travis-url]: https://travis-ci.org/olstenlarck/is-async-function
-[travis-img]: https://img.shields.io/travis/olstenlarck/is-async-function/master.svg?label=linux
+[travis-url]: https://travis-ci.org/tunnckoCore/is-async-function
+[travis-img]: https://img.shields.io/travis/tunnckoCore/is-async-function/master.svg?label=linux
 
 [appveyor-url]: https://ci.appveyor.com/project/tunnckoCore/is-async-function
 [appveyor-img]: https://img.shields.io/appveyor/ci/tunnckoCore/is-async-function/master.svg?label=windows
 
-[coverage-url]: https://codecov.io/gh/olstenlarck/is-async-function
-[coverage-img]: https://img.shields.io/codecov/c/github/olstenlarck/is-async-function/master.svg
+[coverage-url]: https://codecov.io/gh/tunnckoCore/is-async-function
+[coverage-img]: https://img.shields.io/codecov/c/github/tunnckoCore/is-async-function/master.svg
 
 [david-url]: https://david-dm.org/tunnckoCore/is-async-function
 [david-img]: https://img.shields.io/david/tunnckoCore/is-async-function.svg
@@ -208,6 +210,8 @@ _Project scaffolded using [charlike][] cli._
 [standard-url]: https://github.com/feross/standard
 [standard-img]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 
-[paypalme-url]: https://www.paypal.me/tunnckoCore
-[paypalme-img]: https://img.shields.io/badge/paypal-donate-brightgreen.svg
 
+[patreon-url]: https://www.patreon.com/bePatron?u=5579781
+[patreon-img]: https://badgen.net/badge/become/a%20patron/F96854?icon=patreon 
+[kofi-url]: https://ko-fi.com/tunnckocore?a=A220YCY
+[kofi-img]: https://badgen.net/badge/buy%20me/a%20coffee/29ABE0?icon=kofi 
