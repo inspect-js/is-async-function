@@ -109,7 +109,9 @@
       "once",
       "standard-version",
       "verb",
-      "verb-generate-readme"
+      "verb-generate-readme",
+      "function-arguments",
+      "parse-function"
     ]
   },
   "nyc": {

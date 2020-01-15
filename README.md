@@ -46,7 +46,12 @@ const isAsyncFunction = require('is-async-function')
 ```
 
 _**Important Note:** It may fail, if the given function is using "default params" like `options = { foo: 1 }`.
-That limitation comes currently from the `function-arguments` package. It may or may not be fixed there in future._
+That limitation comes currently from the [function-arguments][] package. It may or may not be fixed there in future._
+
+For more advanced stuff, try [parse-function][] which has couple of different versions and support for
+the mentioned problem and dozen of others. It uses real parser to parse given function and returns
+very useful information. PRs replacing the current logic with `parse-function` are not acceptable -
+this is that way intentionally. And was for old times of Node.js!
 
 ## API
 
@@ -183,8 +188,10 @@ _Project scaffolded using [charlike][] cli._
 [common-callback-names]: https://github.com/tunnckocore/common-callback-names
 [dezalgo]: https://github.com/npm/dezalgo
 [fn-name]: https://github.com/sindresorhus/fn-name
+[function-arguments]: https://github.com/tunnckocore/function-arguments
 [is-callback-function]: https://github.com/tunnckocore/is-callback-function
 [once]: https://github.com/isaacs/once
+[parse-function]: https://tunnckocore.com/opensource
 [standard-version]: https://github.com/conventional-changelog/standard-version
 [verb-generate-readme]: https://github.com/verbose/verb-generate-readme
 [verb]: https://github.com/verbose/verb
