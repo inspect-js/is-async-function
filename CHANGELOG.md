@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.2.4](https://github.com/tunnckocore/is-async-function/compare/v1.2.3...v1.2.4) (2020-01-15)
+
+
+### Bug Fixes
+
+* add npm funding field ([c05ef28](https://github.com/tunnckocore/is-async-function/commit/c05ef28a1aa33543fc29c1c897613dc8676c1afc))
+* update deps + the tests; close [#17](https://github.com/tunnckocore/is-async-function/issues/17) ([f2474fc](https://github.com/tunnckocore/is-async-function/commit/f2474fcd339935b9aba7f96668a4a3c66a12a5c3))
+* **src:** remove unneeded condition ([#16](https://github.com/tunnckocore/is-async-function/issues/16)) ([a4d5b41](https://github.com/tunnckocore/is-async-function/commit/a4d5b41fb38efabf735dc3f63779070b0e762c17))
 
 <a name="1.2.3"></a>
 ## [1.2.3](https://github.com/tunnckocore/is-async-function/compare/v1.2.2...v1.2.3) (2017-03-11)
