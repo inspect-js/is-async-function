@@ -1,6 +1,6 @@
 {
   "name": "is-async-function",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Is function really asynchronous function? Trying to guess that based on check if [common-callback-names][] exists as function arguments names or you can pass your custom.",
   "repository": "tunnckoCore/is-async-function",
   "author": "Charlike Mike Reagent <@tunnckoCore> (https://i.am.charlike.online)",
@@ -23,15 +23,14 @@
     "arr-includes": "^2.2.0",
     "arrify": "^2.0.1",
     "common-callback-names": "^2.0.1",
-    "function-arguments": "^1.0.8",
-    "micromatch": "^4.0.2"
+    "function-arguments": "^1.0.8"
   },
   "devDependencies": {
-    "commitizen": "~4.0.3",
-    "cz-conventional-changelog": "3.0.2",
-    "is-match": "^1.0.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "micromatch": "^4.0.2",
     "mukla": "^0.4.9",
-    "npm-run-all": "~4.1.5",
+    "npm-run-all": "^4.1.5",
     "nyc": "^15.0.0",
     "pre-commit": "^1.2.2",
     "standard": "^14.3.1",
