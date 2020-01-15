@@ -12,6 +12,9 @@ var arrIncludes = require('arr-includes')
 var callbackNames = require('common-callback-names')
 var functionArguments = require('function-arguments')
 
+/* istanbul ignore next */
+arrIncludes = arrIncludes.default || arrIncludes
+
 /**
  * > Trying to guess is `fn` asynchronous function or not.
  * But not [is-callback-function][] be aware of that diff.
