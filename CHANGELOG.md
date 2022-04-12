@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.0.0](https://github.com/inspect-js/is-async-function/compare/v1.3.0...v2.0.0) - 2022-04-11
+
+### Commits
+
+- [Breaking] v2 implementation and tests [`d79a37e`](https://github.com/inspect-js/is-async-function/commit/d79a37e25e24a74be3c349de51fda4ad58f30f3a)
+- Initial commit [`456defc`](https://github.com/inspect-js/is-async-function/commit/456defc6dc36809d11dd5a199110e46fe9fb4a6f)
+- npm init [`d35b611`](https://github.com/inspect-js/is-async-function/commit/d35b611d669e57a3a6fd017930d3bf9a0589ffd2)
+- Only apps should have lockfiles [`5920874`](https://github.com/inspect-js/is-async-function/commit/5920874ec2b26762d1037168a73e1c29a4286b1a)
+
 ## [v1.3.0](https://github.com/inspect-js/is-async-function/compare/v1.2.4...v1.3.0) - 2020-01-15
 
 ### Commits

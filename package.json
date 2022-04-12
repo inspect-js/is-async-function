@@ -1,6 +1,6 @@
 {
 	"name": "is-async-function",
-	"version": "1.0.10",
+	"version": "2.0.0",
 	"description": "Determine if a function is a native async function.",
 	"main": "index.js",
 	"scripts": {
