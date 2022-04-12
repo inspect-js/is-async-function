@@ -1,0 +1,31 @@
+{
+	"name": "is-async-function",
+	"version": "1.3.0",
+	"description": "Is this a native `async function`?",
+	"main": "index.js",
+	"exports": {
+		".": "./index.js",
+		"./package.json": "./package.json"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/inspect-js/is-async-function.git"
+	},
+	"keywords": [
+		"async-await",
+		"async",
+		"await",
+		"is-async-function",
+		"function",
+		"fn"
+	],
+	"author": "Jordan Harband <ljharb@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/inspect-js/is-async-function/issues"
+	},
+	"homepage": "https://github.com/inspect-js/is-async-function#readme"
+}
