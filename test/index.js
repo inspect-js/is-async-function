@@ -8,12 +8,7 @@ var generatorFuncs = require('make-generator-function')();
 var asyncFuncs = require('make-async-function').list();
 var hasToStringTag = require('has-tostringtag/shams')();
 
-var forEach = function (arr, func) {
-	var i;
-	for (i = 0; i < arr.length; ++i) {
-		func(arr[i], i, arr);
-	}
-};
+var forEach = require('for-each');
 
 test('returns false for non-functions', function (t) {
 	var nonFuncs = [
