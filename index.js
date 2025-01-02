@@ -1,10 +1,15 @@
 'use strict';
 
-var toStr = Object.prototype.toString;
-var fnToStr = Function.prototype.toString;
-var isFnRegex = /^\s*async(?:\s+function(?:\s+|\()|\s*\()/;
+var callBound = require('call-bound');
+var safeRegexTest = require('safe-regex-test');
+
+var toStr = callBound('Object.prototype.toString');
+var fnToStr = callBound('Function.prototype.toString');
+var isFnRegex = safeRegexTest(/^\s*async(?:\s+function(?:\s+|\()|\s*\()/);
+
 var hasToStringTag = require('has-tostringtag/shams')();
 var getProto = require('get-proto');
+
 var getAsyncFunc = function () { // eslint-disable-line consistent-return
 	if (!hasToStringTag) {
 		return false;
@@ -20,11 +25,11 @@ module.exports = function isAsyncFunction(fn) {
 	if (typeof fn !== 'function') {
 		return false;
 	}
-	if (isFnRegex.test(fnToStr.call(fn))) {
+	if (isFnRegex(fnToStr(fn))) {
 		return true;
 	}
 	if (!hasToStringTag) {
-		var str = toStr.call(fn);
+		var str = toStr(fn);
 		return str === '[object AsyncFunction]';
 	}
 	if (!getProto) {
