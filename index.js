@@ -4,7 +4,7 @@ var toStr = Object.prototype.toString;
 var fnToStr = Function.prototype.toString;
 var isFnRegex = /^\s*async(?:\s+function(?:\s+|\()|\s*\()/;
 var hasToStringTag = require('has-tostringtag/shams')();
-var getProto = Object.getPrototypeOf;
+var getProto = require('get-proto');
 var getAsyncFunc = function () { // eslint-disable-line consistent-return
 	if (!hasToStringTag) {
 		return false;

@@ -40,6 +40,7 @@
 		"url": "https://github.com/inspect-js/is-async-function/issues"
 	},
 	"dependencies": {
+		"get-proto": "^1.0.1",
 		"has-tostringtag": "^1.0.2"
 	},
 	"devDependencies": {
