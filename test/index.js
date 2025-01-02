@@ -69,6 +69,7 @@ test('returns false for generator functions', function (t) {
 
 test('returns false for non-async function with faked @@toStringTag', { skip: !hasToStringTag || asyncFuncs.length === 0 }, function (t) {
 	var asyncFunc = asyncFuncs[0];
+	/** @type {{ toString(): unknown; valueOf(): unknown; [Symbol.toStringTag]?: unknown }} */
 	var fakeAsyncFunction = {
 		toString: function () { return String(asyncFunc); },
 		valueOf: function () { return asyncFunc; }

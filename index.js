@@ -19,8 +19,11 @@ var getAsyncFunc = function () { // eslint-disable-line consistent-return
 	} catch (e) {
 	}
 };
+
+/** @type {import('.').AsyncFunction | false} */
 var AsyncFunction;
 
+/** @type {import('.')} */
 module.exports = function isAsyncFunction(fn) {
 	if (typeof fn !== 'function') {
 		return false;
@@ -37,7 +40,8 @@ module.exports = function isAsyncFunction(fn) {
 	}
 	if (typeof AsyncFunction === 'undefined') {
 		var asyncFunc = getAsyncFunc();
-		AsyncFunction = asyncFunc ? getProto(asyncFunc) : false;
+		// eslint-disable-next-line no-extra-parens
+		AsyncFunction = asyncFunc ? /** @type {import('.').AsyncFunction} */ (getProto(asyncFunc)) : false;
 	}
 	return getProto(fn) === AsyncFunction;
 };
