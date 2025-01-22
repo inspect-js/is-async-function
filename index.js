@@ -10,15 +10,7 @@ var isFnRegex = safeRegexTest(/^\s*async(?:\s+function(?:\s+|\()|\s*\()/);
 var hasToStringTag = require('has-tostringtag/shams')();
 var getProto = require('get-proto');
 
-var getAsyncFunc = function () { // eslint-disable-line consistent-return
-	if (!hasToStringTag) {
-		return false;
-	}
-	try {
-		return Function('return async function () {}')();
-	} catch (e) {
-	}
-};
+var getAsyncFunc = require('./getAsyncFunc');
 
 /** @type {import('.').AsyncFunction | false} */
 var AsyncFunction;
