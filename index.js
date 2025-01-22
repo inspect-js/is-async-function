@@ -43,5 +43,5 @@ module.exports = function isAsyncFunction(fn) {
 		// eslint-disable-next-line no-extra-parens
 		AsyncFunction = asyncFunc ? /** @type {import('.').AsyncFunction} */ (getProto(asyncFunc)) : false;
 	}
-	return getProto(fn) === AsyncFunction;
+	return AsyncFunction && getProto(fn) === AsyncFunction;
 };
