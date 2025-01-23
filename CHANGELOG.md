@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.1.1](https://github.com/inspect-js/is-async-function/compare/v2.1.0...v2.1.1) - 2025-01-22
+
+### Fixed
+
+- [Refactor] use `async-function` for the eval parts [`#31`](https://github.com/inspect-js/is-async-function/issues/31)
+
+### Commits
+
+- [Refactor] move `new Function` helper into a separate file [`db36da5`](https://github.com/inspect-js/is-async-function/commit/db36da5467fbbf0f2ae264114be6aa9edf55e218)
+- [Dev Deps] update `@arethetypeswrong/cli`, `@types/tape` [`981ab90`](https://github.com/inspect-js/is-async-function/commit/981ab907b700d344b510ca1617fda00a66513aa2)
+- [meta] add `exports` [`81bb8e5`](https://github.com/inspect-js/is-async-function/commit/81bb8e578c8cbeeda742715ab7a935c0472866a1)
+- [Refactor] skip `getProto` call when `AsyncFunction` does not exist [`dc929a5`](https://github.com/inspect-js/is-async-function/commit/dc929a547a5f7cd1337b176d20135b8cc3cc23cb)
+
 ## [v2.1.0](https://github.com/inspect-js/is-async-function/compare/v2.0.0...v2.1.0) - 2025-01-02
 
 ### Commits
