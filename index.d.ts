@@ -1,7 +1,9 @@
+import type { AsyncFunction } from 'async-function';
+
 declare namespace isAsyncFunction {
-    type AsyncFunction = (...args: any[]) => Promise<any>
+    export type { AsyncFunction };
 }
 
-declare function isAsyncFunction(fn: unknown): fn is isAsyncFunction.AsyncFunction;
+declare function isAsyncFunction(fn: unknown): fn is AsyncFunction;
 
 export = isAsyncFunction;

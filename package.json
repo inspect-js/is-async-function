@@ -45,6 +45,7 @@
 		"url": "https://github.com/inspect-js/is-async-function/issues"
 	},
 	"dependencies": {
+		"async-function": "^1.0.0",
 		"call-bound": "^1.0.3",
 		"get-proto": "^1.0.1",
 		"has-tostringtag": "^1.0.2",

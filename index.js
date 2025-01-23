@@ -10,10 +10,7 @@ var isFnRegex = safeRegexTest(/^\s*async(?:\s+function(?:\s+|\()|\s*\()/);
 var hasToStringTag = require('has-tostringtag/shams')();
 var getProto = require('get-proto');
 
-var getAsyncFunc = require('./getAsyncFunc');
-
-/** @type {import('.').AsyncFunction | false} */
-var AsyncFunction;
+var getAsyncFunc = require('async-function');
 
 /** @type {import('.')} */
 module.exports = function isAsyncFunction(fn) {
@@ -30,10 +27,6 @@ module.exports = function isAsyncFunction(fn) {
 	if (!getProto) {
 		return false;
 	}
-	if (typeof AsyncFunction === 'undefined') {
-		var asyncFunc = getAsyncFunc();
-		// eslint-disable-next-line no-extra-parens
-		AsyncFunction = asyncFunc ? /** @type {import('.').AsyncFunction} */ (getProto(asyncFunc)) : false;
-	}
-	return AsyncFunction && getProto(fn) === AsyncFunction;
+	var asyncFunc = getAsyncFunc();
+	return asyncFunc && asyncFunc.prototype === getProto(fn);
 };
